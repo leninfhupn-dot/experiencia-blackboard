@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Contenido / CIUDADANÍA Y CAMBIO CLIMÁTICO</title>
 <style>
 :root{--black:#252525;--accent:#f9bd2d;--bg:#f6f6f6;--text:#111;--line:#ddd;--blue:#edf3fb;--link:#1468a0;--icon:#333;--muted:#666}
@@ -75,7 +76,7 @@ a{color:inherit}
 .action{display:grid;grid-template-columns:31px 1fr;margin:14px 0 20px}
 .action .aico{font-size:24px}
 .action b{font-size:19px}
-.action a{display:block;color:var(--link);font-size:18px;line-height:1.35;text-decoration:underline;margin-top:5px}
+.action a{display:block;color:#777;opacity:.55;font-size:18px;line-height:1.35;text-decoration:none;margin-top:5px;pointer-events:none;cursor:default}
 .help{position:fixed;right:20px;bottom:22px;width:32px;height:32px;border:2px solid #222;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;z-index:60}
 @media(max-width:1120px){body{min-width:0}.layout{display:block;padding:20px}.panel{display:none}.hero{height:190px}.tabs{overflow:auto}.tab{font-size:16px}.cardHead{grid-template-columns:150px 1fr 42px;min-height:150px;padding-left:20px}.thumb{width:130px;height:130px}.title{font-size:20px}.desc,.rowSub,.archiveNote,.dateLine{font-size:16px}.rowTitle{font-size:18px}.row,.miniHeader,.simpleHeader{padding:0 18px}.subrow{padding-left:28px}.heroText .name{font-size:24px}}
 	
@@ -86,140 +87,182 @@ a{color:inherit}
   font-weight:400;
   filter:grayscale(1);
 }
+
+
+/* ===== Popup estilo Blackboard para contenido Rise / SCORM ===== */
+.rise-trigger{cursor:pointer}
+.rise-trigger:hover{background:var(--blue)}
+.riseModal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);display:none}
+.riseModal.open{display:block}
+.riseSideRail{position:absolute;left:0;top:0;bottom:0;width:42px;background:#242424;border-right:1px solid #101010}
+.riseClose{position:absolute;top:34px;left:13px;width:46px;height:46px;border:0;background:var(--accent);color:#111;font-size:42px;line-height:40px;cursor:pointer;z-index:2}
+.riseClose:after{content:"";position:absolute;left:0;bottom:-26px;border-left:23px solid transparent;border-right:23px solid transparent;border-top:26px solid var(--accent)}
+.risePanel{position:absolute;left:42px;right:0;top:0;bottom:0;background:#fff;display:flex;flex-direction:column}
+.riseTopbar{height:54px;border-bottom:1px solid #d5d5d5;display:grid;grid-template-columns:150px 1fr 300px;align-items:center;background:#fff;color:#111}
+.riseContentBtn{height:45px;margin-left:18px;border:0;background:#d9d9d9;padding:0 12px;font-size:17px;text-align:left;cursor:pointer}
+.riseContentBtn span{float:right;font-size:24px;line-height:18px}
+.riseBreadcrumb{font-size:18px;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 20px}
+.riseNav{display:flex;gap:18px;align-items:center;justify-content:flex-end;padding-right:24px;font-size:17px;font-weight:700}
+.riseNav button{border:0;background:transparent;font-size:46px;line-height:1;cursor:pointer;color:#111}
+.riseHeader{border-bottom:1px solid #d5d5d5;background:#fff;padding:20px 34px}
+.riseHeader h1{margin:0;font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:38px;line-height:1.18;color:#111}
+.riseFrameWrap{position:relative;flex:1;background:#fff;padding:34px}
+.riseFrameWrap iframe{width:100%;height:100%;border:0;background:#fff;box-shadow:none}
+.riseOpenNew{position:absolute;right:48px;bottom:42px;background:#fff;border:1px solid #cfcfcf;border-radius:4px;padding:9px 14px;color:#111;text-decoration:none;font-size:15px;box-shadow:0 2px 7px rgba(0,0,0,.14)}
+body.modal-open{overflow:hidden}
+@media(max-width:900px){
+  .risePanel{left:0}.riseSideRail{display:none}.riseClose{left:12px;top:12px}
+  .riseTopbar{grid-template-columns:120px 1fr}.riseNav{display:none}
+  .riseHeader{padding:70px 20px 16px}.riseHeader h1{font-size:28px}
+  .riseFrameWrap{padding:16px}
+}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="course-title">MASTER.0.UG.V.UAEG.1011 · CIUDADANÍA Y CAMBIO CLIMÁTICO</div><div class="status">ABIERTO</div></header>
 <nav class="tabs"><a class="tab active">Contenido</a><a class="tab disabled">Calendario</a><a class="tab disabled">Anuncios</a><a class="tab disabled">Debates</a><a class="tab disabled">Libro de calificaciones</a><a class="tab disabled">Mensajes</a><a class="tab disabled">Grupos</a><a class="tab disabled">Logros</a></nav>
 <section class="hero"><div class="heroText"><div class="code">MASTER.0.UG.V.UAEG.1011</div><div class="name">CIUDADANÍA Y CAMBIO CLIMÁTICO</div></div></section>
-
 <div class="layout">
 <main>
-
-  <!-- ==================== INFORMACIÓN GENERAL: EDITABLE EN HTML ==================== -->
-  <section class="card collapsed">
-    <div class="cardHead">
-      <div class="thumb contain"><img src="assets/thumb-info.png" alt="Información general"></div>
-      <div class="copy"><h2 class="title">INFORMACIÓN GENERAL DEL CURSO</h2><p class="desc">🎯 Revisa el sílabo, el video de presentación y el cronograma del curso. Accede a contenidos clave y actividades que potenciarán tu aprendizaje. 🌟 ¡Haz clic y comienza ahora!</p></div>
-      <div class="chev"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    </div>
-    <div class="items">
-      <div class="row"><span class="circle"></span><span class="iconWrap"><img src="assets/icon-link.svg" alt="Enlace"></span><div class="rowTitle">Sílabo del curso</div><span></span></div>
-      <div class="row"><span class="circle"></span><span class="iconWrap"><img src="assets/icon-video.svg" alt="Video"></span><div class="rowTitle">Video del curso</div><span class="dots">•••</span></div>
-      <div class="row"><span class="circle"></span><span class="iconWrap"><img src="assets/icon-lti.svg" alt="Recurso"></span><div class="rowTitle">Recursos básicos para tu aprendizaje</div><span></span></div>
-    </div>
-  </section>
-	
-	<!-- ==================== AVA: EDITABLE EN HTML ==================== -->
-  <section class="card collapsed">
-    <div class="cardHead">
-      <div class="thumb"><img src="assets/ava.png" alt="AVA"></div>
-      <div class="copy"><h2 class="title">AVA | ASISTENTE VIRTUAL ACADÉMICO</h2><p class="desc">AVA está aquí para acompañarte en todos tus retos académicos 👋</p></div>
-      <div class="chev" aria-label="Expandir o contraer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    </div>
-    <div class="items">
-      <div class="row tall">
-        <span class="circle"></span>
-        <span class="iconWrap"><img src="assets/ava2.png" alt="AVA 2"></span>
-        <div><div class="rowTitle">Resuelve tus preguntas con AVA 👋🏻</div><div class="rowSub">Realiza todas tus consultas sobre el contenido del curso y/o practica todo lo aprendido con cuestionarios, preguntas abiertas y dinámicas de role play.</div></div>
-        <span></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== TEMAS 1 AL 4: EDITABLES EN HTML ==================== -->
-  
-  <!-- ==================== TEMA 1: EDITABLE EN HTML ==================== -->
-  <section class="card topicCard collapsed">
-    <div class="cardHead">
-      <div class="thumb contain"><img src="assets/tema-01.png" alt="Tema 1"></div>
-      <div class="copy">
-        <h2 class="title">TEMA 1: Fundamentos de la ciudadanía en el contexto socioambiental</h2>
-        <p class="desc">📚 ¡Explora tu curso! 🚀 Revisa los materiales de la unidad, conoce tus desafíos de aprendizaje, accede a recursos clave y revisa las actividades que potenciarán tu aprendizaje. ¡Haz clic aquí! 💡✨</p>
-      </div>
-      <div class="chev" aria-label="Expandir o contraer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    </div>
-
-    <div class="items">
-      <div class="row">
-        <span class="circle"></span>
-        <span class="iconWrap"><img src="assets/icon-doc.svg" alt="Documento"></span>
-        <div class="rowTitle">💡 Focaliza: Conéctate con el propósito de lo que vas a aprender.</div>
-        <span></span>
-      </div>
-
-      <div class="row toggle">
-        <span class="circle"></span>
-        <span class="iconWrap"><img src="assets/icon-folder.svg" alt="Carpeta"></span>
-        <div class="rowTitle">👆🏻 Linkea: Explora y conecta con los contenidos clave.</div>
-        <span class="itemChev"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-      <div class="nested">
-        <div class="subrow">
-          <span class="circle"></span>
-          <span class="iconWrap"><img src="assets/icon-scorm.svg" alt="Subtema"></span>
-          <div class="rowTitle"><a>Sub-tema 1.1: Conceptos de ciudadanía, participación y responsabilidad colectiva</a></div>
-          <span></span>
-        </div>
-        <div class="subrow">
-          <span class="circle"></span>
-          <span class="iconWrap"><img src="assets/icon-scorm.svg" alt="Subtema"></span>
-          <div class="rowTitle">Sub-tema 1.2: Ciudadanía ecológica y sostenibilidad</div>
-          <span></span>
-        </div>
-        <div class="subrow">
-          <span class="circle"></span>
-          <span class="iconWrap"><img src="assets/icon-scorm.svg" alt="Subtema"></span>
-          <div class="rowTitle">Sub-tema 1.3: Derechos y deberes frente al ambiente y el bien común</div>
-          <span></span>
-        </div>
-        <div class="subrow">
-          <span class="circle"></span>
-          <span class="iconWrap"><img src="assets/icon-scorm.svg" alt="Subtema"></span>
-          <div class="rowTitle">Sub-tema 1.4: Educación ciudadana como base de la acción climática</div>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="row toggle">
-        <span class="circle"></span>
-        <span class="iconWrap"><img src="assets/carpeta.svg" alt="Carpeta"></span>
-        <div class="rowTitle">🎯 Experimenta: Lleva el conocimiento a la acción.</div>
-        <span class="itemChev"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-      <div class="nested">
-        <div class="avaBox">
-          <span class="circle"></span>
-          <span class="iconWrap"><img src="assets/ava2.png" alt="AVA"></span>
-          <div>
-            <div class="rowTitle">Resuelve tus preguntas con AVA 👋🏻</div>
-            <div class="rowSub">Realiza todas tus consultas sobre el contenido del curso y/o practica todo lo aprendido con cuestionarios, preguntas abiertas y dinámicas de role play.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <span class="circle"></span>
-        <span class="iconWrap"><img src="assets/icon-scorm.svg" alt="Actividad"></span>
-        <div class="rowTitle">🎉 eXpande: Celebra lo aprendido en el Tema 1 y sigue explorando nuevos desafíos.</div>
-        <span></span>
-      </div>
-    </div>
-  </section>
-
+<!-- ==================== INFORMACIÓN GENERAL: EDITABLE EN HTML ==================== -->
+<section class="card collapsed">
+<div class="cardHead">
+<div class="thumb contain"><img alt="Información general" src="assets/thumb-info.png"/></div>
+<div class="copy"><h2 class="title">INFORMACIÓN GENERAL DEL CURSO</h2><p class="desc">🎯 Revisa el sílabo, el video de presentación y el cronograma del curso. Accede a contenidos clave y actividades que potenciarán tu aprendizaje. 🌟 ¡Haz clic y comienza ahora!</p></div>
+<div class="chev"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></div>
+</div>
+<div class="items">
+<div class="row"><span class="circle"></span><span class="iconWrap"><img alt="Enlace" src="assets/icon-link.svg"/></span><div class="rowTitle">Sílabo del curso</div><span></span></div>
+<div class="row"><span class="circle"></span><span class="iconWrap"><img alt="Video" src="assets/icon-video.svg"/></span><div class="rowTitle">Video del curso</div><span class="dots">•••</span></div>
+<div class="row"><span class="circle"></span><span class="iconWrap"><img alt="Recurso" src="assets/icon-lti.svg"/></span><div class="rowTitle">Recursos básicos para tu aprendizaje</div><span></span></div>
+</div>
+</section>
+<!-- ==================== AVA: EDITABLE EN HTML ==================== -->
+<section class="card collapsed">
+<div class="cardHead">
+<div class="thumb"><img alt="AVA" src="assets/ava.png"/></div>
+<div class="copy"><h2 class="title">AVA | ASISTENTE VIRTUAL ACADÉMICO</h2><p class="desc">AVA está aquí para acompañarte en todos tus retos académicos 👋</p></div>
+<div aria-label="Expandir o contraer" class="chev"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></div>
+</div>
+<div class="items">
+<div class="row tall">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="AVA 2" src="assets/ava2.png"/></span>
+<div><div class="rowTitle">Resuelve tus preguntas con AVA 👋🏻</div><div class="rowSub">Realiza todas tus consultas sobre el contenido del curso y/o practica todo lo aprendido con cuestionarios, preguntas abiertas y dinámicas de role play.</div></div>
+<span></span>
+</div>
+</div>
+</section>
+<!-- ==================== TEMAS 1 AL 4: EDITABLES EN HTML ==================== -->
+<!-- ==================== TEMA 1: EDITABLE EN HTML ==================== -->
+<section class="card topicCard collapsed">
+<div class="cardHead">
+<div class="thumb contain"><img alt="Tema 1" src="assets/tema-01.png"/></div>
+<div class="copy">
+<h2 class="title">TEMA 1: Fundamentos de la ciudadanía en el contexto socioambiental</h2>
+<p class="desc">📚 ¡Explora tu curso! 🚀 Revisa los materiales de la unidad, conoce tus desafíos de aprendizaje, accede a recursos clave y revisa las actividades que potenciarán tu aprendizaje. ¡Haz clic aquí! 💡✨</p>
+</div>
+<div aria-label="Expandir o contraer" class="chev"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></div>
+</div>
+<div class="items">
+<div class="row">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Documento" src="assets/icon-doc.svg"/></span>
+<div class="rowTitle">💡 Focaliza: Conéctate con el propósito de lo que vas a aprender.</div>
+<span></span>
+</div>
+<div class="row toggle">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Carpeta" src="assets/icon-folder.svg"/></span>
+<div class="rowTitle">👆🏻 Linkea: Explora y conecta con los contenidos clave.</div>
+<span class="itemChev"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></span>
+</div>
+<div class="nested">
+<div class="subrow rise-trigger" data-rise-title="Sub-tema 1.1: Conceptos de ciudadanía, participación y responsabilidad colectiva" data-rise-url="https://github.com/leninfhupn-dot/experiencia-blackboard/blob/main/tema1.1/content/index.html" role="button" tabindex="0">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Subtema" src="assets/icon-scorm.svg"/></span>
+<div class="rowTitle"><a>Sub-tema 1.1: Conceptos de ciudadanía, participación y responsabilidad colectiva</a></div>
+<span></span>
+</div>
+<div class="subrow rise-trigger" data-rise-title="Sub-tema 1.2: Ciudadanía ecológica y sostenibilidad" data-rise-url="https://share.articulate.com/EkQZNQM0yI5Yv9WDrOe_R" role="button" tabindex="0">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Subtema" src="assets/icon-scorm.svg"/></span>
+<div class="rowTitle">Sub-tema 1.2: Ciudadanía ecológica y sostenibilidad</div>
+<span></span>
+</div>
+<div class="subrow rise-trigger" data-rise-title="Sub-tema 1.3: Derechos y deberes frente al ambiente y el bien común" data-rise-url="https://share.articulate.com/EkQZNQM0yI5Yv9WDrOe_R" role="button" tabindex="0">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Subtema" src="assets/icon-scorm.svg"/></span>
+<div class="rowTitle">Sub-tema 1.3: Derechos y deberes frente al ambiente y el bien común</div>
+<span></span>
+</div>
+<div class="subrow rise-trigger" data-rise-title="Sub-tema 1.4: Educación ciudadana como base de la acción climática" data-rise-url="https://share.articulate.com/EkQZNQM0yI5Yv9WDrOe_R" role="button" tabindex="0">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Subtema" src="assets/icon-scorm.svg"/></span>
+<div class="rowTitle">Sub-tema 1.4: Educación ciudadana como base de la acción climática</div>
+<span></span>
+</div>
+</div>
+<div class="row toggle">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Carpeta" src="assets/carpeta.svg"/></span>
+<div class="rowTitle">🎯 Experimenta: Lleva el conocimiento a la acción.</div>
+<span class="itemChev"><svg aria-hidden="true" viewbox="0 0 20 20"><path d="M4 7.5l6 6 6-6" fill="none" stroke="#6b6b6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg></span>
+</div>
+<div class="nested">
+<div class="avaBox">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="AVA" src="assets/ava2.png"/></span>
+<div>
+<div class="rowTitle">Resuelve tus preguntas con AVA 👋🏻</div>
+<div class="rowSub">Realiza todas tus consultas sobre el contenido del curso y/o practica todo lo aprendido con cuestionarios, preguntas abiertas y dinámicas de role play.</div>
+</div>
+</div>
+</div>
+<div class="row">
+<span class="circle"></span>
+<span class="iconWrap"><img alt="Actividad" src="assets/icon-scorm.svg"/></span>
+<div class="rowTitle">🎉 eXpande: Celebra lo aprendido en el Tema 1 y sigue explorando nuevos desafíos.</div>
+<span></span>
+</div>
+</div>
+</section>
 </main>
-
 <aside class="panel">
-  <div class="panelBlock"><h2>Profesores del curso</h2><div class="empty">No hay profesores en el curso</div></div>
-  <div class="panelBlock"><h2>Detalles y acciones</h2>
-    <div class="action"><span class="aico">♟</span><div><b>Lista</b><a>Ver a los participantes de su curso</a></div></div> 
-    <div class="action"><span class="aico">▣</span><div><b>Asistencia</b><a>Ver su asistencia</a></div></div>
-    <div class="action"><span class="aico">▦</span><div><b>Libros y herramientas</b><a>Ver herramientas del curso y de la institución</a></div></div>
-  </div>
+<div class="panelBlock"><h2>Profesores del curso</h2><div class="empty">No hay profesores en el curso</div></div>
+<div class="panelBlock"><h2>Detalles y acciones</h2>
+<div class="action"><span class="aico">♟</span><div><b>Lista</b><a>Ver a los participantes de su curso</a></div></div>
+<div class="action"><span class="aico">▣</span><div><b>Asistencia</b><a>Ver su asistencia</a></div></div>
+<div class="action"><span class="aico">▦</span><div><b>Libros y herramientas</b><a>Ver herramientas del curso y de la institución</a></div></div>
+</div>
 </aside>
 </div>
-<div class="help">?</div>
 
+<div aria-hidden="true" class="riseModal" id="riseModal">
+<div class="riseSideRail">
+<button aria-label="Cerrar" class="riseClose" type="button">×</button>
+</div>
+<div aria-labelledby="riseTitle" aria-modal="true" class="risePanel" role="dialog">
+<div class="riseTopbar">
+<button class="riseContentBtn" type="button">Contenido <span>➜</span></button>
+<div class="riseBreadcrumb">TEMA 1: Ciudadanía y cambio climático</div>
+<div class="riseNav">
+<button class="risePrev" type="button">‹</button>
+<span>Anterior</span>
+<span>Siguiente</span>
+<button class="riseNext" type="button">›</button>
+</div>
+</div>
+<div class="riseHeader">
+<h1 id="riseTitle">Sub-tema</h1>
+</div>
+<div class="riseFrameWrap">
+<iframe allowfullscreen="" id="riseFrame" loading="lazy" src="" title="Contenido Rise"></iframe>
+<a class="riseOpenNew" href="https://share.articulate.com/EkQZNQM0yI5Yv9WDrOe_R" id="riseOpenNew" rel="noopener" target="_blank">Abrir en una nueva pestaña</a>
+</div>
+</div>
+</div>
+<div class="help">?</div>
 <script>
 /* JavaScript mínimo solo para abrir/cerrar desplegables.
    Todo el contenido de temas, subtemas, T1, T2 y EF está escrito arriba en HTML editable. */
@@ -239,6 +282,57 @@ document.querySelectorAll('.toggle').forEach(function(row) {
     }
   });
 });
+
+
+// Popup para subtemas: abre el contenido Rise en un iframe.
+(function(){
+  const modal = document.getElementById('riseModal');
+  const frame = document.getElementById('riseFrame');
+  const title = document.getElementById('riseTitle');
+  const openNew = document.getElementById('riseOpenNew');
+  const closeBtn = modal ? modal.querySelector('.riseClose') : null;
+
+  function openRise(row){
+    const url = row.dataset.riseUrl || 'https://share.articulate.com/EkQZNQM0yI5Yv9WDrOe_R';
+    const rowTitle = row.dataset.riseTitle || row.innerText.trim() || 'Contenido';
+    title.textContent = rowTitle;
+    frame.src = url;
+    openNew.href = url;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeRise(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    frame.src = '';
+  }
+
+  document.querySelectorAll('.rise-trigger').forEach(function(row){
+    row.addEventListener('click', function(e){
+      e.preventDefault();
+      openRise(row);
+    });
+    row.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        openRise(row);
+      }
+    });
+  });
+
+  if(closeBtn) closeBtn.addEventListener('click', closeRise);
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeRise();
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal && modal.classList.contains('open')) closeRise();
+  });
+})();
 </script>
 </body>
 </html>
